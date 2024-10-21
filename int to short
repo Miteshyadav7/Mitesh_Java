@@ -1,0 +1,8 @@
+class Example{
+public static void main(String [] args){
+int p = 10;
+short r =(short) (p);
+
+System.out.println(r);
+}
+}
