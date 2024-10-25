@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class User{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Hello");
+System.out.println("May know your good name?");
+String name = sc.next();
+System.out.println((name) + "what would you like?");
+System.out.println("Menu");
+System.out.println("1.Coffe = Rs20\n2.burger = RS50\n3.pizza = RS150\n4.sandwich = RS70"); 
+System.out.println("select no. between 1 to 4 for order");
+int choice = sc.nextInt();
+int bill = 0;
+switch(choice)
+{
+case 1 :
+System.out.println("your order is coffe");
+bill = bill+20;
+break;
+
+case 2 :
+System.out.println("your order is burger");
+bill = bill+50;
+break;
+case 3 :
+System.out.println("your order is pizza");
+bill = bill+150;
+break;
+case 4 :
+System.out.println("your order is sandwich");
+bill = bill+70;
+break;
+}
+
+System.out.println("your bill is"+(bill)+"\nTHANK YOU VISIT AGAIN");
+}}
