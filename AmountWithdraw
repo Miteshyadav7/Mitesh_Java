@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);
+int n = 20000;
+System.out.println("enter a amount");
+int amount = sc.nextInt();
+if(amount<n)
+{
+System.out.println("transaction successful");
+}
+else
+{
+System.out.println("unsufficent balance");
+}
+}}      
