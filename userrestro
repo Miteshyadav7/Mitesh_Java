@@ -1,0 +1,107 @@
+import java.util.Scanner;
+class Restaurent{
+	public static void main(String [] args){
+	int total_bill = 0;
+	boolean continueOrdering = true;
+	// prices
+	int tea = 20;
+	int coffee = 29;
+	int sandwich = 49;
+	int burger = 69;
+	int pizza = 99;
+
+	// greetings and Info
+	System.out.println("Hello! Welcome to our Brother's Restaurent :)");
+	System.out.println("May I know your good name,sir?");
+	Scanner sc = new Scanner(System.in);
+	System.out.print("Enter your name here:");
+	String name = sc.next();
+	System.out.println("Hi "+name+"!"+" What would you like to eat?");
+
+	// Menu for people
+		while(continueOrdering){
+	System.out.println("1.Tea----------Rs."+tea+ "\n" +"2.Coffee-------Rs."+coffee+ "\n" 					    				+"3.Sandwich-----Rs."+sandwich+ "\n" +"4.Burger-------Rs."+burger+ "\n" +"5.Pizza--------Rs."+pizza);
+	System.out.print("Enter a number to place your order: ");
+	int number = sc.nextInt();
+	switch(number){
+		case 1:
+			System.out.println();
+	       		System.out.println("Your tea will be ready in 10 minutes.");
+			System.out.println("Please wait!");
+			total_bill = total_bill + tea;
+			System.out.println();
+			break;
+		case 2:
+			System.out.println();
+			System.out.println("Your coffee will be ready in 10 minutes.");
+			System.out.println("Please wait!");
+			total_bill = total_bill + coffee;
+			System.out.println();
+			break;
+		case 3:
+			System.out.println();
+			System.out.println("Your sandwich will be ready in 15 minutes.");
+			System.out.println("Please wait!");
+			total_bill = total_bill + sandwich;
+			System.out.println();
+			break;
+		case 4: 
+			System.out.println();
+			System.out.println("Your burger will be ready in 15 minutes.");
+			System.out.println("Please wait!");
+			total_bill = total_bill + burger;
+			System.out.println();
+			break;
+		case 5: 
+			System.out.println();
+			System.out.println("Your pizza will be ready in 20 minutes.");
+			System.out.println("Please wait!");
+			total_bill = total_bill + pizza;
+			System.out.println();
+			break;	
+		default: 
+			System.out.println();
+			System.out.println("Sorry, we are unable to provide you anything else. Do you prefer something from the 					    menu?");
+			break;
+		}	
+		System.out.println("Would you like to order anything else?");
+		System.out.print("Type(Yes/No):");
+		String another_order = sc.next();
+		if (another_order.equalsIgnoreCase("no")){
+			continueOrdering = false;
+			break;
+		}
+	}
+	System.out.println();
+	System.out.println("Your total bill is Rs."+total_bill);
+		
+		System.out.println();
+		System.out.println("In which way you want to pay,sir/madam?"+"\n"+ "1.Cash."+"\n"+"2.Pay online."+"\n"+"3.Card.");
+		System.out.print("Choose any one mode from above:");
+		int payment_method = sc.nextInt();
+		switch (payment_method) {
+			case 1:
+			System.out.println();
+			System.out.println("You choose to pay by cash.");
+			System.out.println("Paid="+total_bill);
+				break;
+			case 2:
+			System.out.println();
+			System.out.println("You choose to pay by online.");
+			System.out.println("Paid="+total_bill);
+				break;
+			case 3:
+			System.out.println();
+			System.out.println("You choose to pay by card.");
+			System.out.println("Paid="+total_bill);
+				break;
+			default: 
+			System.out.println();
+			System.out.println("Invalid payment method.");
+				break;
+		}
+		System.out.println();
+		System.out.println("Thank you for visting "+ name + ". Enjoy your meal! ^-^.");
+	
+}
+}
