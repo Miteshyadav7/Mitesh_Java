@@ -1,0 +1,11 @@
+class Example{
+public static void main(String [] args){
+int n =50;
+int i=1;
+do{
+n = 
+n++; 
+}
+while(i<=n);
+System.out.println(n);
+}}
