@@ -1,0 +1,14 @@
+wap to find the no of currency
+/*import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+System.out.println("enter a no");
+Scanner sc = new Scanner(System.in);
+
+int n = sc.nextInt();
+int m = n/2000;
+int o = n%2000/500;
+int p = n%2000%500/200;
+int q = n%2000%500%200/100;
+System.out.println(m+o+p+"no of currency get");
+}}
