@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);
+int n = 20000;
+System.out.println("enter a amount");
+int amount = sc.nextInt();
+System.out.println("enter a pin");
+int pin = sc.nextInt();
+ 
+if(pin == 2350)
+{
+System.out.println("correct pin");
+if(amount<n)
+{
+System.out.println("transaction successful");
+}
+else
+System.out.println("unsufficent balance");
+}
+else
+{ 
+System.out.println("invalid pin");
+}                                                                                            .
+}}      
