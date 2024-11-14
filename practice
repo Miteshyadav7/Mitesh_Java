@@ -1,0 +1,177 @@
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+System.out.println("enter a no");
+Scanner sc = new Scanner(System.in);
+
+int n = sc.nextInt();
+int m = n/2000;
+int o = n%2000/500;
+int p = n%2000%500/200;
+int q = n%2000%500%200/100;
+System.out.println(m+o+p+"no of currency get");
+}}*/
+
+
+
+//wap to print largest five no among three 
+
+/*import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+System.out.println("enter 5 no");
+Scanner sc = new Scanner(System.in);
+
+System.out.print("a = ");
+int a = sc.nextInt();
+System.out.print("b = ");
+int b = sc.nextInt();
+System.out.print("c = ");
+int c = sc.nextInt();
+System.out.print("d = ");
+int d = sc.nextInt();
+System.out.print("e = ");
+int e = sc.nextInt();
+if(a>b && a>c && a>d && a>e)
+{
+System.out.println("a is largest");
+}
+if(b>a && b>c && b>d && b>e)
+{
+System.out.println("b is largest");
+}
+if(c>a && c>b && c>d && c>e)
+{
+System.out.println("c is largest");
+}
+if(d>a && d>b && d>c && d>e)
+{
+System.out.println("d is largest");
+}
+if(e>a && e>b && e>c && e>d)
+{
+System.out.println("e is largest");
+}
+}}
+
+// wap to enter no is dreater and positve then divide
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+System.out.println("enter 2 no and 1st no is greater");
+Scanner sc = new Scanner(System.in);
+
+System.out.print("a = ");
+int a = sc.nextInt();
+System.out.print("b = ");     
+int b = sc.nextInt();
+int c = a/b;
+if(a>=0 && a>b)
+{
+System.out.println(c);
+}
+else
+{
+System.out.println("output is invalid");
+}
+}}*/
+//wap to a no between 1 to 50 whic divisble by 4
+/*import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+System.out.println("enter 2 no and 1st no is greater");
+Scanner sc = new Scanner(System.in);
+
+System.out.print("a = ");
+int a = sc.nextInt();
+System.out.print("b = ");     
+int b = sc.nextInt();
+int c = a/b;
+if(a>=0 && a>b)
+{
+System.out.println(c);
+}
+else
+{
+System.out.println("output is invalid");
+}
+}}*/
+// wap to factorial
+/*class Example{
+public static void main(String [] args){
+int n = 5;
+
+int f = 1;
+for(int i=1;i<=n;i++)
+{ 
+ f = f*i;
+}
+System.out.println(f); 
+}}*/
+
+
+
+
+// prime no
+/*class Example{
+public static void main(String [] args){
+int n = 50;
+int check;
+  for(int i=2;i<=50;i++){
+      check = 0;
+      for(int j=2;j<i;j++){ 
+       if (i%j==0){
+        check = 1;
+        }
+      }
+    if(check == 0){ 
+      System.out.println(i); 
+   }
+  }
+}}*/
+//wap to print reverse no using do while
+/*import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);  
+ System.out.println("enter a choice");
+
+int n = sc.nextInt();
+do
+{
+ System.out.println(n);
+n--;
+}while(n>0);
+}}*/
+// wap of reverse no with do while 
+/*class Example{
+public static void main(String [] args){
+int sum =0;
+int rem;
+int n =54867953;
+int n1 = n;
+do
+{
+rem = n % 10;
+sum = sum * 10 + rem;
+n = n/10;
+}while(n!=0);
+System.out.println(sum);
+}}*/
+/*class Example{
+public static void main(String [] args){
+int n =50;
+int i=1;
+do{
+n = 
+n++; 
+}
+while(i<=n);
+System.out.println(n);
+}}*/
+class Example{
+public static void main(String [] args){
+int x =15;
+int y =10;
+System.out.println(x|y); 
+}}
