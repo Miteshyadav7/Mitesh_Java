@@ -1,0 +1,15 @@
+class Example 
+    {
+        public static void main(String args[]) 
+        {
+            int x,y;
+            x = 5;
+            {
+	         y = 6;
+	        System.out.print(x + " " + y);
+            }
+            System.out.println(x + " " + y);
+        } 
+    }
+
+ 
