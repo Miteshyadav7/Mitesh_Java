@@ -1,0 +1,14 @@
+class Example{
+public static void main(String [] args){
+int a[] = new int[5];
+a[0]=5;
+a[1]=10;
+a[2]=20;
+a[3]=30;
+a[4]=40;
+System.out.println("fisrt no "+a[0]);
+System.out.println("second no "+a[1]);
+System.out.println("third no "+a[2]);
+System.out.println("fourth no "+a[3]);
+System.out.println("fifth no "+a[4]);
+}}
