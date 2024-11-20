@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+int age[] = new int[10];
+
+int i;
+Scanner sc = new Scanner(System.in);
+for(i=0;i<10;i++)
+{
+System.out.print("enter  age for"+(i+1)+"student");
+age [i] = sc.nextInt();
+}
+for(i=0;i<10;i++)
+{
+System.out.println("age "+(i+1)+"student"+age[i]);
+}
+}}
