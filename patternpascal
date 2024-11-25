@@ -1,0 +1,17 @@
+class Example21{
+public static void main(String [] args){
+for(int i=1;i<=5;i++)
+{
+for(int j=4;j>=i;j--)
+{
+System.out.print(" ");
+}
+int p=1;
+for(int m=0;m<=i;m++)
+{
+System.out.print(p+" ");
+p=p*(i-m)/m+1;
+}
+System.out.println();
+}
+}}
