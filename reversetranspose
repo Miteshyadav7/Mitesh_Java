@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+Scanner sc = new Scanner(System.in);
+System.out.print("enter a row of matrix");
+int n = sc.nextInt();
+
+int matx[][] = new int[n][n];
+for(int i=0;i<n;i++){
+for(int j=0;j<n;j++){
+System.out.print("Element("+i+", "+j+"):");
+matx[i][j] = sc.nextInt();
+}
+System.out.println();
+}
+
+
+for(int i=0;i<n;i++){
+for(int j=0;j<n;j++){
+System.out.print((i==j)?(matx[i][j]):"  ");
+//System.out.print((n-i-1)==j?(matx[i][j]):"  ");reverse transpose
+}
+System.out.println();
+
+}
+}}
