@@ -1,0 +1,32 @@
+class Example{
+public static void main(String [] args){
+int a[] = new int[5];
+a[0]=5;
+a[1]=10;
+a[2]=20;
+a[3]=30;
+a[4]=40;
+System.out.println("fisrt no "+a[0]);
+System.out.println("second no "+a[1]);
+System.out.println("third no "+a[2]);
+System.out.println("fourth no "+a[3]);
+System.out.println("fifth no "+a[4]);
+}}*/
+
+/*import java.util.Scanner;
+class Example{
+public static void main(String [] args){
+int age[] = new int[10];
+
+int i;
+Scanner sc = new Scanner(System.in);
+for(i=0;i<10;i++)
+{
+System.out.print("enter  age for"+(i+1)+"student");
+age [i] = sc.nextInt();
+}
+for(i=0;i<10;i++)
+{
+System.out.println("age "+(i+1)+"student"+age[i]);
+}
+}}
