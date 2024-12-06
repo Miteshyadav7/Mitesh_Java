@@ -1,0 +1,22 @@
+class Function{
+void multi()
+{
+int c = 10*20;
+System.out.println("hii");
+}
+void add()
+{
+int c = 10+20;
+System.out.println(c);
+}
+void sub()
+{
+int c = 10-20;
+System.out.println(c);
+}
+public static void main(String [] args){
+Function m= new Function();
+m.multi();
+m.add();
+m.sub();
+}}
