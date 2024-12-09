@@ -1,0 +1,17 @@
+class Example{
+int add()
+{
+int a,b,c;
+a=10;
+b=20;
+c=a+b;
+return c;
+}
+public static void main(String [] args){
+{
+Example obj = new Example();
+System.out.println("sum ="+c);
+int c = obj.add();
+
+}
+}}
