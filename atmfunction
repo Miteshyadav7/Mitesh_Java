@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class Example{
+Scanner sc = new Scanner(System.in);
+int inr = 20000;
+void deposite()
+{
+System.out.println("enter a amount to deposite");
+int deposit = sc.nextInt();
+System.out.println("available balance");
+inr = inr + deposit;
+System.out.println(inr);
+}
+void withdrawl()
+{
+System.out.println("enter a amount to withdraw");
+int amount = sc.nextInt();
+System.out.println("enter a pin");
+int pin = sc.nextInt(); 
+if(pin == 2350)
+{
+System.out.println("correct pin");
+if(amount<inr)
+{
+System.out.println("transaction successful");
+}
+else
+System.out.println("unsufficent balance");
+}
+else
+{ 
+System.out.println("invalid pin");
+}
+}
+
+public static void main(String [] args){
+Example m = new Example();
+m.deposite();
+m.withdrawl();
+}}      
