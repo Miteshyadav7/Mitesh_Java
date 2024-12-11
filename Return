@@ -1,0 +1,15 @@
+class Example{
+int add()
+{
+int a,b;
+a=10;
+b=20;
+
+return (a+b);
+}
+public static void main(String [] args){
+{
+Example obj = new Example();
+System.out.println("sum ="+obj.add());
+}
+}}
