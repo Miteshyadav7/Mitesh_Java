@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Example{
+int add()
+{
+int a,b;
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the 2 value");
+a=sc.nextInt();
+b=sc.nextInt();
+
+return (a+b);
+}
+public static void main(String [] args){
+{
+Example obj = new Example();
+System.out.println("result = "+obj.add());
+}
+}}
