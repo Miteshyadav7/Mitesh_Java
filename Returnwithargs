@@ -1,0 +1,21 @@
+
+class Example{
+int add(int y)
+{
+
+return y+y;
+}
+int cube(int a)
+{
+return a*a*a;
+}
+public static void main(String [] args){
+{
+Example obj = new Example();
+
+int c = obj.add(07);
+int d = obj.cube(10);
+System.out.println("result = "+c);
+System.out.println("result = "+d);
+}
+}} 
