@@ -1,0 +1,16 @@
+class Example{
+void add(int y,int x)
+{
+System.out.println("sum = "+(y+x));
+}
+void sub(int y,int x)
+{
+System.out.println("sum = "+(y-x));
+}
+public static void main(String [] args){
+Example obj = new Example();
+{
+obj.add(07,10);
+obj.sub(10,20);
+}
+}} 
