@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+class Function{
+int ino;
+int qty,rate,amt,dis,net;
+Scanner sc = new Scanner(System.in);
+
+void bill()
+{
+System.out.println("enter a total product");
+int n= sc.nextInt();
+int tbill = 0;
+int []amt = new int[n];
+for(int i=0;i<n;i++)
+{
+System.out.println("enter item no");
+ino = sc.nextInt();
+System.out.println("quantity");
+qty = sc.nextInt();
+System.out.println("rate");
+rate = sc.nextInt();
+
+System.out.println("amount");
+amt[i] = qty*rate;
+System.out.println(amt[i]);
+tbill =tbill + amt[i];
+}
+System.out.println("total bill"+"="+tbill);
+
+System.out.println("discount");
+dis = tbill*10/100;
+System.out.println(dis);
+System.out.println("net amount to pay");
+net = tbill-dis;
+System.out.println(net);
+System.out.println("thank you visit again!!!");
+
+}
+
+public static void main(String [] args){
+Function m= new Function();
+m.bill();
+}}
