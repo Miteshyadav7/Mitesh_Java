@@ -1,0 +1,24 @@
+class Student{
+int id;
+String name;
+Student (int id,String name)
+{
+System.out.println("para construct");
+this.id = id;                                  
+this.name = name;
+}
+ void display()
+{             
+System.out.println(id +":"+name);
+}
+}
+class constructor
+{
+public static void main(String args[])
+{
+Student obj1 = new Student (101,"pushpa");
+obj1.display();
+Student obj2 = new Student (102,"raj");
+obj2.display();
+}
+}
