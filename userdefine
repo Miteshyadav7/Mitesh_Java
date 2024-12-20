@@ -1,0 +1,25 @@
+class Student{
+private int rollno ;
+private String name;
+Student ()
+{
+System.out.println("user define");
+rollno = 101;
+name = "pushpa";
+}
+public int getrollno ()
+{
+return rollno;
+}
+public String getname ()
+{
+return name;
+}}
+class constructor
+{
+public static void main(String args[])
+{
+Student obj1 = new Student ();
+System.out.println(obj1.getrollno ());
+System.out.println(obj1.getname ());
+}}
