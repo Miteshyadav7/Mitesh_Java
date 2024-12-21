@@ -1,0 +1,21 @@
+class Example1{
+public static void main(String [] args){
+int sum =0;
+int rem;
+int n =12321;
+int n1 = n;
+while(n!=0)
+{
+rem = n % 10;
+sum = sum * 10 + rem;
+n = n/10;
+}
+if(sum == n1)
+{
+System.out.println("palindron no");
+}
+else
+{
+System.out.println("not palindron no");
+}
+}}
