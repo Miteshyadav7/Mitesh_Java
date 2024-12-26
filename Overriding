@@ -1,0 +1,19 @@
+class A {
+    void sum() {
+        System.out.println("sum of A");
+    }
+}
+
+class B {
+    void sum() {
+        System.out.println("sum of B");
+    }
+}
+
+class demo {
+    public static void main(String args[]) {
+        B obj;
+        obj = new B();
+        obj.sum();
+    }
+}
