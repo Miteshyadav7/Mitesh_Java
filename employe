@@ -1,0 +1,32 @@
+
+
+//assign ==> 5
+
+class employe {
+    void calculatesalary() {
+        System.out.println("speed varies for diff class");
+    }
+}
+
+class manager {
+    void calculatesalary() {
+        System.out.println("add a bonus to the base salary");
+    }
+}
+
+class developer {
+    void calculatesalary() {
+        System.out.println("calculate salary based on hours worked");
+    }
+}
+
+class demo {
+    public static void main(String args[]) {
+
+        employe obj = new employe();
+        obj.calculatesalary();
+        developer obj1 = new developer();
+        obj1.calculatesalary();
+
+    }
+}
