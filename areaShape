@@ -1,0 +1,28 @@
+
+class Shape {
+    void calculate() {
+        System.out.println("Area calculation not define for shape ");
+    }
+}
+
+class Circle extends Shape {
+    void calculate() {
+        int r = 20;
+        System.out.println("Area of circle" + (3.14 * r * r));
+    }
+
+    void rectangle() {
+        int l = 20;
+        int B = 20;
+        System.out.println("Area of rectangle" + (l * B));
+    }
+}
+
+class demo {
+    public static void main(String args[]) {
+
+        Circle obj = new Circle();
+        obj.calculate();
+        obj.rectangle();
+    }
+}
