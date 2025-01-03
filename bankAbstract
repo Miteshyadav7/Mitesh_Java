@@ -1,0 +1,45 @@
+abstract class bankaccount {
+    abstract void deposite();
+
+    abstract void withdraw();
+
+}
+
+class savingaccount extends bankaccount {
+    void deposite() {
+
+        System.out.println("deposite");
+    }
+
+    void withdraw() {
+
+        System.out.println("withdrwa");
+    }
+
+}
+
+class currentaccount extends bankaccount {
+    void deposite() {
+
+        System.out.println("deposite");
+    }
+
+    void withdraw() {
+
+        System.out.println("withdrwa");
+    }
+}
+
+class demo {
+    public static void main(String[] args) {
+
+        savingaccount obj = new savingaccount();
+        obj.deposite();
+        obj.withdraw();
+
+        currentaccount obj1 = new currentaccount();
+        obj.deposite();
+        obj.withdraw();
+
+    }
+}
