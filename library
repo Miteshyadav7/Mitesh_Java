@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+interface libraryoperation {
+    void issuebook();
+    void returnbook();
+}
+
+class student implements libraryoperation {
+    public void issuebook() {
+        System.out.println("book is issued");
+    }
+
+    public void returnbook() {
+        System.out.println("book is returned");
+    }
+
+}
+
+class teacher implements libraryoperation {
+    public void issuebook() {
+        System.out.println("book is issued to teachers ");
+    }
+
+    public void returnbook() {
+        System.out.println("book is returned to teachers");
+    }
+
+
+}
+
+    class demo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" enter 1 for student choice and 2 for teacher choice");
+        int c = sc.nextInt();
+        if (c == 1) {
+            libraryoperation obj = new student();
+            obj.issuebook();
+            obj.returnbook();
+    }
+    else if (c == 2)
+    {
+        libraryoperation obj = new teacher();
+            obj.issuebook();
+            obj.returnbook();
+
+    }
+}
+}
