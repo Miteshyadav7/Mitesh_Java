@@ -1,0 +1,49 @@
+interface shape {
+    void calculatearea();
+
+}
+
+class circle implements shape {
+    public void calculatearea() {
+    }
+
+    public void calculate(int r) {
+        System.out.println(3.14 * r * r);
+    }
+
+}
+
+class rectangle implements shape {
+    public void calculatearea() {
+    }
+
+    public void calculate(int l,int b) {
+    
+    
+        System.out.println(l*b);
+
+    }
+
+}
+
+    class demo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" enter 1 for circle and 2 for rectangle");
+        int c = sc.nextInt();
+        if (c == 1) {
+            circle obj = new circle();
+            int d = sc.nextInt();
+            obj.calculate(d);
+
+    }
+    else if (c == 2)
+    {
+        rectangle obj1 = new rectangle();
+        int e = sc.nextInt();
+        int f = sc.nextInt();
+        obj1.calculate(e,f);
+
+    }
+}
+}
