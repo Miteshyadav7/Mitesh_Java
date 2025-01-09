@@ -1,0 +1,24 @@
+
+interface rashmika {
+    default void add() {
+        System.out.println("hello");
+    }
+
+}
+
+interface harshika {
+    default void addo() {
+        System.out.println("hello");
+    }
+
+}
+
+class demo implements harshika, rashmika {
+    public static void main(String[] args) {
+        rashmika obj = new demo();
+        obj.add();
+        harshika obj1 = new demo();
+        obj1.addo();
+
+    }
+}
