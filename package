@@ -1,0 +1,11 @@
+package com.Production;
+import com.infobeans.ai.Software1;
+import com.infobeans.ml.Software2;
+import com.google.development.Software2IMPL;
+public class demo90{
+public static void main(String args []){
+Software1 obj = new Software1(); 
+
+Software2IMPL obj1 = new Software2IMPL(); 
+obj1.code();
+}}
