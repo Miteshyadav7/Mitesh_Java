@@ -1,0 +1,42 @@
+
+
+class employe {
+
+    void calculatesalary() {
+        System.out.println("speed varies for diff class");
+    }
+}
+
+class manager extends employe {
+
+    void calculatesalary() {
+        int x = 20000;
+        int bonus = (20000 * 10) / 100;
+
+        System.out.println("total salary" + (x + bonus));
+    }
+}
+
+class developer extends employe {
+
+    void calculatesalary() {
+
+        System.out.println("calculate salary based on hours worked");
+        int perhr = 200;
+        int r = 18;
+        int totalsalary = (200 * 18);
+        System.out.println(totalsalary);
+    }
+}
+
+class demo {
+
+    public static void main(String args[]) {
+
+        manager obj = new manager();
+        obj.calculatesalary();
+        developer obj1 = new developer();
+        obj1.calculatesalary();
+
+    }
+}
