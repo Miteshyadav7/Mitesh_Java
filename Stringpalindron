@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Jan16 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String os = sc.nextLine();
+        String r = "";
+        char ch;
+        for (int i = 0; i < os.length(); i++) {
+            ch = os.charAt(i);
+            r = ch + r;
+        }
+
+        System.out.println(r);
+
+        if (r.equals(os)) {
+            System.out.println("palindron no");
+        } else {
+            System.out.println("non palindron no");
+        }
+    }
+}
