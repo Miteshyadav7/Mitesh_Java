@@ -1,0 +1,32 @@
+import java.util.*;
+
+class ArmstrongCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int a1 = a;
+        int a2 = a;
+        int count = 0;
+        int sum = 0;
+        while (a1 > 0) {
+            count++;
+            a1 /= 10;
+        }
+        while (a2 != 0) {
+            int digit = a2 % 10;
+            int power = 1;
+            for (int i = 0; i < count; i++) {
+                power = power * digit;
+            }
+            sum = sum + power;
+            a2 /= 10;
+        }
+        if (sum == a) {
+            System.out.println(a + " armstrong");
+        } else {
+            System.out.println("non armstrong");
+        }
+
+    }
+
+}
