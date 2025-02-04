@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+class Invalidage extends RuntimeException {
+    Invalidage(String str) {
+        super(str);
+    }
+}
+
+class Invalidmarks extends RuntimeException {
+    Invalidmarks(String str) {
+        super(str);
+    }
+}
+
+
+ * class Main {
+ * public static void main(String[] args) {
+ * System.out.println("main");
+ * Scanner sc = new Scanner(System.in);
+ * String m = sc.nextLine();
+ * int age = sc.nextInt();
+ * int marks = sc.nextInt();
+ * if (age > 18) {
+ * System.out.println("valid age");
+ * } else {
+ * 
+ * throw new Invalidage("age is not valid");
+ * }
+ * if (marks > 80) {
+ * System.out.println("valid for license");
+ * } else {
+ * throw new Invalidmarks("marks is not valid");
+ import java.util.Scanner;
+
+class Invalidage extends RuntimeException {
+    Invalidage(String str) {
+        super(str);
+    }
+}
+
+class Invalidmarks extends RuntimeException {
+    Invalidmarks(String str) {
+        super(str);
+    }
+}
+
+
+   class Main {
+  public static void main(String[] args) {
+  System.out.println("main");
+  Scanner sc = new Scanner(System.in);
+  String m = sc.nextLine();
+  int age = sc.nextInt();
+  int marks = sc.nextInt();
+  if (age > 18) {
+  System.out.println("valid age");
+  } else {
+  
+  throw new Invalidage("age is not valid");
+  }
+  if (marks > 80) {
+  System.out.println("valid for license");
+  } else {
+  throw new Invalidmarks("marks is not valid");
+  }
+  }
+  }
