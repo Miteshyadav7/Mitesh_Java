@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class Bill {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("WELCOME TO MPEB");
+        System.out.println(" TO GENERTATE BILL ");
+        System.out.println(" ENTER YOUR NAME");
+        String a = sc.nextLine();
+        System.out.println(" ENTER YOUR ADDRESS");
+        String p = sc.nextLine();
+        System.out.println(" ENTER YOUR PHONE NO");
+        int q = Integer.parseInt(sc.nextLine());
+
+        System.out.println(" ENTER YOUR METRE ID");
+        int r = Integer.parseInt(sc.nextLine());
+
+        System.out.println(" press 1 for ==> domestic");
+        System.out.println(" press 2 for ==> Comercial");
+        int b = sc.nextInt();
+        int bill = 0;
+        int d = 4;
+
+        switch (b) {
+            case 1:
+                System.out.println("enter the unit for bill");
+                int c = sc.nextInt();
+                if (c < 100) {
+
+                    System.out.println("Total bill  ");
+                    System.out.println("RS" + "null");
+                }
+
+                else if (c > 100 && c < 200) {
+                    bill = bill + c * d;
+                    System.out.println("Total bill  ");
+                    System.out.println("RS" + "=" + bill);
+                } else if (c > 200) {
+                    bill = bill + c * 6;
+                    System.out.println("Total bill  ");
+                    System.out.println("RS" + bill);
+
+                }
+                break;
+            case 2:
+                System.out.println("enter the unit for bill");
+                int e = sc.nextInt();
+
+                System.out.println("Total bill  ");
+                bill = bill + e * 10;
+
+                System.out.println("RS" + bill);
+            default:
+                System.out.println("THANK YOU FOR GENERATING BILL");
+
+        }
+
+    }
+
+}
