@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Setmain {
+    public static void main(String args[]) {
+        Set<String> s = new TreeSet<String>();
+        s.add("mitesh");
+        s.add("kitesh");
+        try {
+            s.add(null);
+            s.add(null);
+        } catch (Exception rr) {
+            // System.out.println("NUll value not accepted");
+            s.add("null");
+        }
+        s.add("mitesh");
+        System.out.println("set elemnet" + s);
+
+    }
+
+}
