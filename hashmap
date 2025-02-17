@@ -1,0 +1,15 @@
+import java.util.*;
+
+/*/class Sets14 {
+    public static void main(String[] args) {
+
+        Map<Integer, String> m = new HashMap();
+
+        m.put(101, "ram");
+        m.put(105, "ram");
+        m.put(104, null);
+
+        m.put(101, "shyam");
+        System.out.println(m);
+    }
+}
