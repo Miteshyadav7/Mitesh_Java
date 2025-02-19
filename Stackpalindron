@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Feb18 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        char[] ar = a.toCharArray();
+        Stack s = new Stack<>();
+        Stack os = new Stack<>();
+        Stack rs = new Stack<>();
+
+        for (char c : ar) {
+            s.add(c);
+            os.add(c);
+        }
+        while (!s.isEmpty()) {
+            rs.add(s.pop());
+        }
+        System.out.println(os);
+        System.out.println(rs);
+
+        if (os.equals(rs)) {
+            System.out.println("palindron no");
+        } else {
+            System.out.println(" non  palindron no");
+
+        }
+    }
+}
