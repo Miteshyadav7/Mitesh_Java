@@ -1,0 +1,176 @@
+import java.util.*;
+
+/*public class Feb21 {
+    public static void main(String[] args) {
+        HashMap<Integer, String> m = new HashMap<>();
+        m.put(101, "abc");
+        m.put(121, "xyz");
+        m.put(11, "www");
+        System.out.println(m);
+        for (Map.Entry<Integer, String> i : m.entrySet()) {
+            System.out.println(i.getKey());
+            System.out.println(i.getValue());
+
+            if (i.getKey().equals(121)) {
+                i.setValue("rashmika");
+            }
+
+        }
+        System.out.println(m);
+    }
+
+}*/
+
+/*class Sports implements Comparable<Sports> {
+    private int id;
+    private String name;
+    private double score;
+    private int played;
+
+    Sports(int id, String name, double score, int played) {
+        this.id = id;
+        this.name = name;
+        this.score = score;
+        this.played = played;
+    }
+
+    public int getid() {
+        return id;
+    }
+
+    public String getname() {
+        return name;
+
+    }
+
+    public double getscore() {
+        return score;
+
+    }
+
+    public int getplayed() {
+        return played;
+
+    }
+
+    public String toString() {
+        return id + name + score + played;
+    }
+
+    public int compareTo(Sports e) {
+        if (this.getscore() < e.getscore()) {
+            return +1;
+        } else if (this.getscore() > e.getscore()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+class Played implements Comparator<Sports> {
+
+    public int compare(Sports e1, Sports e2) {
+        if (e1.getplayed() < e2.getplayed()) {
+            return +1;
+        } else if (e1.getplayed() > e2.getplayed()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+class Alpha implements Comparator<Sports> {
+
+    public int compare(Sports e1, Sports e2) {
+        return e1.getname().compareTo(e2.getname());
+    
+    }
+}
+
+class Feb21{
+    public static void main(String[] args) {
+        Sports e1 = new Sports(56, "ramesh", 99, 5);
+        Sports e2 = new Sports(6, "jamesh", 50, 10);
+        Sports e3 = new Sports(86, "somesh", 200, 105);
+
+        List<Sports> s = new ArrayList<>();
+
+        s.add(e1);
+        s.add(e2);
+        s.add(e3);
+        Collections.sort(s);
+        
+        System.out.println(s);
+
+        Collections.sort(s, new Played());
+        
+        System.out.println(s);
+
+        Collections.sort(s, new Alpha());
+        
+        System.out.println(s );
+
+    }
+}*/
+
+class Product implements Comparable<Product> {
+    private int id;
+    private String name;
+    private double price;
+    private int quantity;
+
+    Product(int id, String name, double price, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public int getid() {
+        return id;
+    }
+
+    public String getname() {
+        return name;
+    }
+
+    public double getprice() {
+        return price;
+    }
+
+    public int getquantity() {
+        return quantity;
+    }
+
+    public String toString() {
+        return id + name + price + quantity;
+    }
+
+    public int compareTo(Product p) {
+        if (this.getprice() < p.getprice()) {
+            return -1;
+        } else if (this.getprice() < p.getprice()) {
+            return +1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+class Feb21 {
+    public static void main(String[] args) {
+        Product e1 = new Product(566, "milk", 540, 6);
+        Product e2 = new Product(56, "wheat", 1000, 100);
+        Product e3 = new Product(474, "rice", 100, 6);
+
+        List<Product> l = new ArrayList<>();
+        l.add(e1);
+        l.add(e2);
+        l.add(e3);
+        Collections.sort(l);
+        System.out.println(l);
+
+    }
+}
