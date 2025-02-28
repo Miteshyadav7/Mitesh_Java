@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class Stream {
+    public static void main(String[] args) {
+        ArrayList<Integer> l = new ArrayList<>();
+        l.add(5);
+        l.add(47);
+        l.add(33);
+        l.add(87);
+        l.add(17);
+        l.stream().filter(x -> x % 2 == 1).distinct().map(x -> x * x).forEach(x -> System.out.println(x));
+
+    }
+
+}
