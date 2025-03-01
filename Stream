@@ -1,0 +1,43 @@
+import java.util.*;
+import java.util.stream.Collectors;
+
+class Student {
+    String name;
+    int marks;
+
+    Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public String getname() {
+        return name;
+    }
+
+    public Integer getmarks() {
+        return marks;
+    }
+
+    public String toString() {
+        return marks + name;
+    }
+
+}
+
+class Feb28 {
+    public static void main(String[] args) {
+        ArrayList<Student> l = new ArrayList<>();
+        Student e1 = new Student("mitesh", 50);
+        Student e2 = new Student("kitesh", 80);
+        Student e3 = new Student("titesh", 70);
+        l.add(e1);
+        l.add(e2);
+        l.add(e3);
+
+        // List<Integer> l2 = l.stream().sorted((x, y) ->
+        // -x.getmarks().compareTo(y.getmarks()))
+        // .collect(Collectors.toList());
+        l.stream().sorted((x, y) -> -x.getmarks().compareTo(y.getmarks())).forEach(y -> System.out.println(y));
+        // System.out.println(l2);
+    }
+}
