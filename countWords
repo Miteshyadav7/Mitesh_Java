@@ -1,0 +1,36 @@
+public class Filehandle {
+    public static void main(String args[]) throws IOException {
+
+        FileWriter fr = new FileWriter("javaworld.txt");
+        PrintWriter br = new PrintWriter(fr);
+        br.println("welcome to");
+        br.println("my  home");
+        br.println("byee");
+        br.println(1000);
+        br.close();
+        System.out.println("done");
+
+        FileReader f = new FileReader("javaworld.txt");
+        int x = f.read();
+        int charcount = 0;
+        int wordcount = 0;
+        while (x != -1) {
+            // System.out.println((char) x);
+            charcount++;
+            x = f.read();
+        }
+        FileReader f1 = new FileReader("javaworld.txt");
+        BufferedReader b = new BufferedReader(f1);
+        String str = b.readLine();
+        while (str != null) {
+            String[] words = str.split(" ");
+            wordcount = wordcount + words.length;
+
+            str = b.readLine();
+        }
+        System.out.println(charcount + "no of characters");
+        System.out.println(wordcount + "no of words");
+        b.close();
+
+    }
+}
