@@ -1,0 +1,24 @@
+public class Filehandle {
+    public static void main(String args[]) throws IOException {
+        
+          FileWriter fr = new FileWriter("javaworld.txt");
+          PrintWriter br = new PrintWriter(fr);
+          br.println("welcome");
+          br.println("home");
+          br.println("byee");
+          br.println(1000);
+          br.close();
+          System.out.println("done");
+         
+
+        FileReader f = new FileReader("javaworld.txt");
+        BufferedReader b = new BufferedReader(f);
+        String str = b.readLine();
+        while (str != null) {
+            System.out.println(str);
+             str = b.readLine();
+        }
+        b.close();
+
+    }
+}
