@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+class Filehandle {
+    public static void main(String args[]) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        FileWriter fr = new FileWriter("javaworld.txt");
+        PrintWriter br = new PrintWriter(fr);
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            br.println(sc.nextLine());
+
+        }
+
+        br.close();
+        System.out.println("done");
+
+    }
+}
