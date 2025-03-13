@@ -1,0 +1,26 @@
+abstract class Animal {
+    abstract void sound();
+
+}
+
+class lion extends Animal {
+    void sound() {
+        System.out.println("roaring");
+    }
+}
+
+class tiger extends Animal {
+    void sound() {
+        System.out.println("roar");
+    }
+}
+
+class demo {
+    public static void main(String[] args) {
+
+        lion obj = new lion();
+        obj.sound();
+        tiger obj1 = new tiger();
+        obj1.sound();
+    }
+}
