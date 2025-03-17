@@ -1,0 +1,117 @@
+/* 
+
+// bank
+/*
+ * class bank {
+ * int getinterestrate() {
+ * return 0;
+ * }
+ * }
+ * 
+ * class sbi extends bank {
+ * int getinterestrate() {
+ * return 5;
+ * }
+ * }
+ * 
+ * class icici extends bank {
+ * int getinterestrate() {
+ * return 6;
+ * }
+ * }
+ * 
+ * class axis extends bank {
+ * int getinterestrate() {
+ * return 7;
+ * }
+ * }
+ * 
+ * class demo {
+ * public static void main(String args[]) {
+ * 
+ * sbi obj = new sbi();
+ * 
+ * System.out.println(obj.getinterestrate());
+ * icici obj1 = new icici();
+ * System.out.println(obj1.getinterestrate());
+ * axis obj2 = new axis();
+ * System.out.println(obj2.getinterestrate());
+ * 
+ * }
+ * }
+ */
+//
+
+/*
+ * class vehicle {
+ * void speed() {
+ * System.out.println("speed varies for diff class");
+ * }
+ * }
+ * 
+ * class car {
+ * void speed() {
+ * System.out.println("the car speed is 120");
+ * }
+ * }
+ * 
+ * class bike {
+ * void speed() {
+ * System.out.println("the bike speed is 80");
+ * }
+ * }
+ * 
+ * class demo {
+ * public static void main(String args[]) {
+ * 
+ * car obj = new car();
+ * obj.speed();
+ * bike obj1 = new bike();
+ * obj1.speed();
+ * 
+ * }
+ * }
+ */
+
+// assign ==> 5
+
+class employe {
+
+    void calculatesalary() {
+        System.out.println("speed varies for diff class");
+    }
+}
+
+class manager extends employe {
+
+    void calculatesalary() {
+        int x = 20000;
+        int bonus = (20000 * 10) / 100;
+
+        System.out.println("total salary" + (x + bonus));
+    }
+}
+
+class developer extends employe {
+
+    void calculatesalary() {
+
+        System.out.println("calculate salary based on hours worked");
+        int perhr = 200;
+        int r = 18;
+        int totalsalary = (200 * 18);
+        System.out.println(totalsalary);
+    }
+}
+
+class demo {
+
+    public static void main(String args[]) {
+
+        manager obj = new manager();
+        obj.calculatesalary();
+        developer obj1 = new developer();
+        obj1.calculatesalary();
+
+    }
+}
