@@ -1,0 +1,99 @@
+package jdbc1;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+
+//march 17 assignment
+
+
+public class Q2 {
+	public static void main(String[] args) throws SQLException{
+		String url ="jdbc:mysql://localhost:3306/parties";
+		Connection con = DriverManager.getConnection(url,"root","root");
+		String query = "insert into admin values(?,?,?,?,?)";
+		PreparedStatement st = con.prepareStatement(query);
+//		st.executeUpdate("create table admin(id int primary key auto_increment, name varchar(20),age int ,course varchar(20), email varchar(20))");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter 1 for insert data");
+		System.out.println("enter 2 for retrieve data");
+		System.out.println("enter 3 for create table");
+		System.out.println("enter 4 for delete data with id");
+		System.out.println("enter 5 for update name with id");
+		System.out.println("enter 6 for delete table");
+		int n = sc.nextInt();
+		sc.nextLine();
+		switch(n)
+		{
+		case 1 :
+		
+		
+		System.out.println("no of students");
+		int a = sc.nextInt();
+		for(int i=0;i<a;i++) {
+			System.out.println("insert id ");
+			int id = sc.nextInt();
+			System.out.println("insert name ");
+			sc.nextLine();
+			String name = sc.nextLine();
+			System.out.println("insert age ");
+			int age = sc.nextInt();
+			sc.nextLine();
+			System.out.println("insert course ");
+			String course = sc.nextLine();
+			System.out.println("insert email ");
+			String email = sc.nextLine();
+			st.setInt(1, id);
+			st.setString(2, name);
+			st.setInt(3, age);
+			st.setString(4, course);
+			st.setString(5, email);			
+			
+			st.executeUpdate();
+		}
+		break;
+		case 2:
+		
+		ResultSet rs = st.executeQuery("select * from admin ");
+while(rs.next()){
+	System.out.println(rs.getInt("id")+rs.getString("name")+rs.getInt("age")+rs.getString("course")+rs.getString("email"));
+System.out.println();
+}
+break;
+		case 3:
+			System.out.println("enter name for table");
+			String name = sc.nextLine();
+			st.executeUpdate("create table" +name+"(id int primary key auto_increment, name varchar(20),age int ,course varchar(20), email varchar(20))");		
+			break;
+		case 4:
+			System.out.println("enter id to delete");
+			int i = sc.nextInt();
+	st.executeUpdate("delete from admin where id = "+i); 	
+	break;
+	case 5:
+		System.out.println("enter name ");
+		String s = sc.nextLine();
+		System.out.println("enter id to update");
+
+		int f = sc.nextInt();
+		
+		st.executeUpdate("update admin set name = '" +s+ "'where id = "+f);
+		break;
+	case 6:
+		System.out.println("enter name of table for delete");
+		String fame = sc.nextLine();
+		st.executeUpdate("drop table " +fame);
+		
+		}
+
+	}
+
+}
+
+
+
