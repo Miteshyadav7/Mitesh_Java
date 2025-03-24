@@ -1,0 +1,42 @@
+package jdbc;
+import java.sql.*;
+import java.util.Scanner;
+
+public class Q1 {
+	public static void main(String [] args) throws SQLException{
+		String url ="jdbc:mysql://localhost:3306/parties";
+		Connection con = DriverManager.getConnection(url,"root","root");
+		String query = "insert into student values(?,?,?,?)";
+		PreparedStatement st = con.prepareStatement(query);
+
+	//st.executeUpdate("create table student(id int primary key auto_increment,name varchar(20) NOT NULL,age int check(age >= 18),marks int check(marks between 0 and 100))");	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("no of students");
+		int a = sc.nextInt();
+		for(int i=0;i<a;i++) {
+			System.out.println("insert id ");
+			int id = sc.nextInt();
+			System.out.println("insert name ");
+			sc.nextLine();
+			String name = sc.nextLine();
+			System.out.println("insert age ");
+			int age = sc.nextInt();
+			sc.nextLine();
+			System.out.println("insert marks ");
+			String marks = sc.nextLine();
+			st.setInt(1, id);
+			st.setString(2, name);
+			st.setInt(3, age);
+			st.setString(4, marks);
+				
+			
+			st.executeUpdate();
+		}
+		
+		
+		
+		
+		
+	}
+
+}
