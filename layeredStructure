@@ -1,0 +1,39 @@
+package com.infobeans.main;
+import com.infobeans.dao.Studentdao;
+import com.infobeans.service.StudentService;
+
+
+import java.util.*;
+import java.util.Scanner;
+
+
+public class Studentmain {
+	public static void main(String args []) {
+		Scanner sc = new Scanner(System.in);
+
+
+
+
+
+		int id = sc.nextInt();
+		sc.nextLine();
+		String name =  sc.nextLine();
+		int age = sc.nextInt();
+		StudentService stuservice = new StudentService();
+		Student s = new Student(id,name,age);
+		stuservice.insertStudent(s);
+	
+	
+
+		StudentService stuservice1 = new StudentService();
+		List <Student> l  = stuservice1.FindAll();
+	System.out.println("succesful");
+
+	for (Student x:l) {
+		System.out.println(x);
+
+}}}
+
+
+	
+
