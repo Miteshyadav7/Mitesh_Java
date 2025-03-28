@@ -1,0 +1,38 @@
+package main;
+import com.infobeans.model.*;
+import com.infobeans.service.Hotelservice;
+import com.infobeans.dao.*;
+
+import java.sql.SQLException;
+import java.util.*;
+public class Hotelmain {
+	public static void main(String args []) throws SQLException {
+Scanner sc = new Scanner(System.in);
+Hotelservice obj = new Hotelservice();
+
+System.out.println("1.create table /n 2.inserting /n3.retrive data");
+int n = sc.nextInt();
+
+switch(n) {
+case 1:
+	obj.creatingtable();
+	break;
+case 2:
+	
+	obj.insertinghotel();
+	break;
+	
+case 3:
+	obj.retriving();
+	break;
+	
+	
+	
+}
+
+
+
+
+	}
+
+}
