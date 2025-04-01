@@ -1,0 +1,193 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Sellerdao {
+
+	Scanner sc = new Scanner(System.in);
+	String url ="jdbc:mysql://localhost:3306/parties";
+
+	public void addseller() throws SQLException {
+
+		
+		
+		Connection con = DriverManager.getConnection(url,"root","root");
+		String query = "insert into seller values(?,?,?,?,?,?,?,?)";
+	
+		PreparedStatement st = con.prepareStatement(query);
+		System.out.println("WELCOME TO AUTOMOBILE");
+		System.out.println("Please Enter Detail Of Your Selling Car ");
+	System.out.println("ENTER A REG NUMBER");
+	String regno = sc.nextLine();
+	System.out.println("ENTER A YEAR OF MANUFACTURING ");
+	int year = sc.nextInt();
+	
+	System.out.println("ENTER A BRAND");
+System.out.println("1. JAGUAR \n2.TATA \n3.MARUTI SUZUKI \n4.TOYOTA \n5. MAHINDRA \n6. LAND ROVER \n7. MERCEDES \n.8 MG \n9.SKODA \n10.VOLKSWAGEN");
+sc.nextLine();
+String brand = sc.nextLine();
+	System.out.println("ENTER A MODEL OF CAR");
+	String model = sc.nextLine();	
+	System.out.println("ENTER A VARIENT OF CAR");
+	System.out.println("1. Petrol \n 2. Diesel \n 3.CNG ");
+		String varient = sc.nextLine();
+		System.out.println("ENTER A OWNERSHIP");
+	int owner = sc.nextInt();
+	System.out.println("ENTER A KMDRIVEN");
+	int kmdriven = sc.nextInt();
+	sc.nextLine();
+	System.out.println("ENTER A CONTACT NUMBER");
+	String phnno = sc.nextLine();
+	System.out.println("VEHICLE REGISTERED SUCCESSFULLY ");
+	System.out.println("WAIT FOR VALUATION OF YOUR CAR");
+	
+
+if(year>2015) {
+	// 2016 
+	if(year==2016 && (kmdriven>=100000 && kmdriven<=150000)) {
+		System.out.println("your vehicle value is 300000");
+	}
+	else if(year==2016 && (kmdriven>=50000 && kmdriven<=100000)) {
+		System.out.println("your vehicle value is 350000");
+	}
+	else if(year==2016 && (kmdriven>=1000 && kmdriven<=50000)) {
+		System.out.println("your vehicle value is 400000");
+	}
+	
+	//2017
+	if(year==2017 && (kmdriven>=100000 && kmdriven<=150000)) {
+		System.out.println("your vehicle value is 320000");
+	}
+	else if(year==2017 && (kmdriven>=50000 && kmdriven<=100000)) {
+		System.out.println("your vehicle value is 370000");
+	}
+	else if(year==2017 && (kmdriven>=1000 && kmdriven<=50000)) {
+		System.out.println("your vehicle value is 420000");
+	}
+	//2018
+	if(year==2018 && (kmdriven>=100000 && kmdriven<=150000)) {
+		System.out.println("your vehicle value is 340000");
+	}
+	else if(year==2018 && (kmdriven>=50000 && kmdriven<=100000)) {
+		System.out.println("your vehicle value is 390000");
+	}
+	else if(year==2018 && (kmdriven>=1000 && kmdriven<=50000)) {
+		System.out.println("your vehicle value is 440000");
+	}
+	//2019
+	if(year==2019 && (kmdriven>=100000 && kmdriven<=150000)) {
+		System.out.println("your vehicle value is 370000");
+	}
+	else if(year==2017 && (kmdriven>=50000 && kmdriven<=100000)) {
+		System.out.println("your vehicle value is 450000");
+	}
+	else if(year==2017 && (kmdriven>=1000 && kmdriven<=50000)) {
+		System.out.println("your vehicle value is 480000");
+	}
+	//2020
+	if(year==2020 && (kmdriven>=100000 && kmdriven<=150000)) {
+		System.out.println("your vehicle value is 500000");
+	}
+	else if(year==2020 && (kmdriven>=50000 && kmdriven<=100000)) {
+		System.out.println("your vehicle value is 525000");
+	}
+	else if(year==2020 && (kmdriven>1000 && kmdriven<50000)) {
+		System.out.println("your vehicle value is 575000");
+	}
+//2021
+	if(year==2021 && (kmdriven>100000 && kmdriven<150000)) {
+		System.out.println("your vehicle value is 595000");
+	}
+	else if(year==2021 && (kmdriven>50000 && kmdriven<100000)) {
+		System.out.println("your vehicle value is 625000");
+	}
+	else if(year==2021 && (kmdriven>1000 && kmdriven<50000)) {
+		System.out.println("your vehicle value is 650000");
+	}
+	//2022
+	if(year==2022 && (kmdriven>100000 && kmdriven<150000)) {
+		System.out.println("your vehicle value is 670000");
+	}
+	else if(year==2022 && (kmdriven>50000 && kmdriven<100000)) {
+		System.out.println("your vehicle value is 690000");
+	}
+	else if(year==2022 && (kmdriven>1000 && kmdriven<50000)) {
+		System.out.println("your vehicle value is 720000");
+	}
+	//2023
+	if(year==2023 && (kmdriven>100000 && kmdriven<150000)) {
+		System.out.println("your vehicle value is 720000");
+	}
+	else if(year==2023 && (kmdriven>50000 && kmdriven<100000)) {
+		System.out.println("your vehicle value is 740000");
+	}
+	else if(year==2023 && (kmdriven>1000 && kmdriven<50000)) {
+		System.out.println("your vehicle value is 770000");
+		}
+	//2024
+	if(year==2024 && (kmdriven>100000 && kmdriven<150000)) {
+		System.out.println("your vehicle value is 770000");
+	}
+	else if(year==2024 && (kmdriven>50000 && kmdriven<100000)) {
+		System.out.println("your vehicle value is 815000");
+	}
+	else if(year==2024 && (kmdriven>1000 && kmdriven<50000)) {
+		System.out.println("your vehicle value is 850000");
+	}
+	//2025
+		if(year==2025 && (kmdriven>100000 && kmdriven<150000)) {
+			System.out.println("your vehicle value is 850000");
+		}
+		else if(year==2025 && (kmdriven>50000 && kmdriven<100000)) {
+			System.out.println("your vehicle value is 890000");
+		}
+		else if(year==2025 && (kmdriven>1000 && kmdriven<50000)) {
+			System.out.println("YOUR VEHICLE VALUE IS 950000");
+		}
+
+	
+
+		st.setString(1,regno);
+		st.setString(2, brand);
+	st.setInt(3, year);
+	st.setString(4, model);
+	st.setString(5,varient );
+	st.setInt(6, owner);
+	st.setInt(7,kmdriven);
+	st.setString(8,phnno);
+	st.executeUpdate();
+	
+	
+	
+	
+	
+	
+
+
+
+}
+	
+	
+	}}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
