@@ -1,0 +1,32 @@
+<html>
+    <body style="background-color: aqua;">
+       <h1 style="color: aliceblue;"> FORM </h1>
+<table>
+    <tr>
+        
+        <td><label>first name</label></td>
+        <td><input type ="text" id="n1" placeholder="enter name"></td>
+       </tr>
+        <br>
+        <tr>
+        <td><label>last  name</label></td>
+       <td> <input type ="text" id="n1" placeholder="last name"></td>
+    </tr>
+    <br>
+    <tr>
+        <td><label> course</label></td>
+        <td><select name  ="course" id = "c1">
+        <option>btech</option>
+        <option>bba</option>
+        <option>law</option>
+    </select> 
+        </td>
+        </tr>
+        <tr>
+            <td>text here</td>
+            <td><textarea name = "usertext" cols=" 30"rows="10"></textarea>
+        </tr>
+        
+</table>
+    </body>
+</html>
