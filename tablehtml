@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <h1> registration form</h1>
+        <form>
+            <br>
+            <tr>
+                <td><label> enter name</label></td>
+                <td><input type= "text" placeholder="eneter name"></td>
+
+            </tr>
+            <br>
+            <tr>
+                <td><label> enter email</label></td>
+                <td><input type= "text" placeholder="eneter email"></td>
+                
+            </tr>
+            <br>
+            <tr>
+                <td> gender:</td>
+                <td>
+                    male:<input type ="radio" name = "r1"></input>
+                    female:<input type ="radio" name = "r1"></input>
+                    other:<input type ="radio" name = "r1"></input>
+                </td>
+            </tr>
+        </form>
+    </body>
+</html>
