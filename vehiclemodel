@@ -1,0 +1,32 @@
+import { pool } from "../db/dbConfig.js";
+import { resolve } from "path";
+import { rejects } from "assert";
+
+export class Vehicle{
+  constructor(name,model,year,fuel,seating,ac,charge){
+    this.name=name;
+    this.model=model;
+    this.year=year;
+    this.fuel=fuel;
+    this.seating=seating;
+    this.ac=ac;
+    this.charge=charge;
+}
+ static create(vehicle){
+    pool.getConnection((err,con)=>{
+         return new Promise((resolve,rejects)=>{
+            if(!err){
+                let sql  = "insert into vehicles(name,model,year,fuel,seating,ac,charge)values(?,?,?,?,?,?,?)";
+                con.query(sql,[vehicle.name,vehicle.model,vehicle.year,vehicle.fuel,vehicle.seating,vehicle.ac,vehicle.charge],(err,result)=>{
+                   con.release();
+                    err?rejects(err):resolve(result)
+                })
+            }
+         })
+    })
+
+ }
+
+} 
+
+  export default Vehicle;
